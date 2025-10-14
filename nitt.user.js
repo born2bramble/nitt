@@ -255,7 +255,7 @@
                 }
             }
         `
-        document.body.insertAdjacentElement("afterBegin", newStyles)
+        document.head.insertAdjacentElement("beforeEnd", newStyles)
     }
 
 })();
