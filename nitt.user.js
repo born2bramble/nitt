@@ -883,13 +883,12 @@
                 }
             }
 
-            /* ----- Bulk tagging ----- */
-            .nitt__bulk-tag-toggle {
-                 margin-inline-end: auto;
-                 justify-self: flex-start;
-                 display: flex;
-                 align-items: center;
-                 display: grid;
+  /* ----------+ Bulk tagging +----------- */
+  .nitt__bulk-tag-toggle {
+    margin-inline-end: auto;
+    justify-self: flex-start;
+    align-items: center;
+    display: grid;
     grid-template-areas:
         'toggle .'
         'count action';
@@ -901,35 +900,26 @@
     background: #1F222A;
     padding-block-end: 16px;
     grid-template-columns: 1fr auto;
-            }
+  }
 
-            .nitt__bulk-thumbnail-selector {
-                position: absolute;
-                z-index: 1;
-                inset: 0;
-                /* background-color: #ffc0cb42; */
-                border-radius: 5px;
-                /* opacity: .3; */
-               /* outline: 3px white solid;*/
-
-                    position: absolute;
+  .nitt__bulk-thumbnail-selector {
+    position: absolute;
     z-index: 1;
     inset: 0;
-
     border-radius: 5px;
-    /* opacity: .3; */
+    position: absolute;
     outline: 2px #ffffff8f solid;
     outline-offset: -2px;
 
-                input { display: none; }
-                 label {
-                    inset: 0;
-    position: absolute;
-                 }
-            }
+    input { display: none; }
+    label {
+      inset: 0;
+      position: absolute;
+    }
+  }
 
-            .nitt__bulk-select-faux-input {
-                --checkbox-size-xs: calc(1rem * var(--mantine-scale));
+  .nitt__bulk-select-faux-input {
+    --checkbox-size-xs: calc(1rem * var(--mantine-scale));
     --checkbox-size-sm: calc(1.25rem * var(--mantine-scale));
     --checkbox-size-md: calc(1.5rem * var(--mantine-scale));
     --checkbox-size-lg: calc(1.875rem * var(--mantine-scale));
@@ -943,7 +933,6 @@
     min-width: var(--checkbox-size);
     height: var(--checkbox-size);
     min-height: var(--checkbox-size);
-    border-radius: var(--checkbox-radius, var(--mantine-radius-default));
     transition: border-color .1s ease, background-color .1s ease;
     cursor: var(--mantine-cursor-type);
     -webkit-tap-highlight-color: transparent;
@@ -954,21 +943,22 @@
     border-color: var(--mantine-color-dark-1);
     border-width: 2px;
     border-radius: 5px 2px;
-    }
-        input:checked + .nitt__bulk-select-faux-input {
-           background-color: var(--checkbox-color);
+  }
+  
+  input:checked + .nitt__bulk-select-faux-input {
+    background-color: var(--checkbox-color);
     border-color: var(--checkbox-color);
-        }
+  }
 
-        .nitt__bulk-select-faux-input__check {
-            display: block;
+  .nitt__bulk-select-faux-input__check {
+    display: block;
     width: 60%;
     color: transparent;
     pointer-events: none;
     transform: translateY(calc(.3125rem * var(--mantine-scale))) scale(.5);
     opacity: 1;
     transition: transform .1s ease, opacity .1s ease;
-        }
+  }
 
         input:checked + .nitt__bulk-select-faux-input > .nitt__bulk-select-faux-input__check {
         opacity: 1;
@@ -987,7 +977,7 @@
     /*outline: 5px solid #b201ff;
     outline-offset: -6px;
     border: 2px solid #1f1f1f;*/
-        backdrop-filter: brightness(.6);
+    backdrop-filter: brightness(.6);
     outline: 2px #7070708f solid;
     }
       #nitt__toggleBulkSelector {
